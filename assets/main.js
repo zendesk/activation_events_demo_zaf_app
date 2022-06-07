@@ -20,16 +20,17 @@ client.on("app.deactivated", (data) => {
 	console.log(`DEBUG ${client._context["location"]} app.deactiviated`, data);
 });
 
-const displayModal = async () => {
+async function displayModal() {
 	// Create modal instance
-	const data = await client.invoke("instances.create", {
+	const instanceData = await client.invoke("instances.create", {
 		location: "modal",
 		url: "assets/iframe.html",
 	});
+
 	// Access modal instance
-	let instanceGuid = data["instances.create"][0].instanceGuid;
+	let instanceGuid = instanceData["instances.create"][0].instanceGuid;
 	let modalClient = client.instance(instanceGuid);
 	modalClient.on("modal.close", (data) => {
 		console.log(`DEBUG modal.close`, data);
 	});
-};
+}
