@@ -1,4 +1,4 @@
-let client = ZAFClient.init();
+const client = ZAFClient.init();
 
 client.on("app.activated", (data) => {
 	console.log(`DEBUG ${client._context["location"]} app.activated`, data);
@@ -23,19 +23,21 @@ client.on("app.deactivated", (data) => {
 async function createModal() {
 	return client.invoke("instances.create", {
 		location: "modal",
-		url: "assets/iframe.html",
+		url: "assets/modal.html",
 	});
 }
 
 function accessModal(instanceData) {
-	let instanceGuid = instanceData["instances.create"][0].instanceGuid;
-	let modalClient = client.instance(instanceGuid);
+	const instanceGuid = instanceData["instances.create"][0].instanceGuid;
+	const modalClient = client.instance(instanceGuid);
 	modalClient.on("modal.close", (data) => {
 		console.log(`DEBUG modal.close`, data);
 	});
 }
 
+// Runs when user clicks button in app UI
 async function displayModal() {
+
 	// Create modal instance
 	const instanceData = await createModal();
 
