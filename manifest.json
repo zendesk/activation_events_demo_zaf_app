@@ -1,9 +1,9 @@
 {
 	"name": "Test Activate Events",
 	"author": {
-		"name": "Bryan",
-		"email": "bflynn@zendesk.com",
-		"url": ""
+		"name": "Developer Advocacy at Zendesk",
+		"email": "developer-support@zendesk.com",
+		"url": "https://developer.zendesk.com/documentation/"
 	},
 	"defaultLocale": "en",
 	"private": true,

@@ -20,6 +20,7 @@ client.on("app.deactivated", (data) => {
 	console.log(`DEBUG ${client._context["location"]} app.deactiviated`, data);
 });
 
+// Creates the modal instance
 async function createModal() {
 	return client.invoke("instances.create", {
 		location: "modal",
@@ -27,6 +28,7 @@ async function createModal() {
 	});
 }
 
+// Access the modal instance and logs to the console when modal is closed
 function accessModal(instanceData) {
 	const instanceGuid = instanceData["instances.create"][0].instanceGuid;
 	const modalClient = client.instance(instanceGuid);
@@ -37,10 +39,7 @@ function accessModal(instanceData) {
 
 // Runs when user clicks button in app UI
 async function displayModal() {
-
-	// Create modal instance
 	const instanceData = await createModal();
 
-	// Access modal instance
-	accessModal(instanceData);
+	return accessModal(instanceData);
 }
