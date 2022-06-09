@@ -4,7 +4,7 @@ This app is installed in every [location](https://developer.zendesk.com/api-refe
 
 Filter with 'DEBUG' in the Console window to reduce noise level and better see events as they occur.
 
-All locations should have an app.activated event appear in the Console window.
+All locations should have an app.activated event appear in the Console window when the app is initiated/begins running.
 
 top_bar, nav_bar, and ticket_editor locations should have pane.activated and pane.deactivated events appear.
 
