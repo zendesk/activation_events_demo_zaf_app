@@ -1,23 +1,30 @@
 const client = ZAFClient.init();
 
+// Runs on app.registered event
+client.on("app.registered", (data) => {
+	client.invoke("notify", `DEBUG ${client._context["location"]} app.activated`);
+	console.log(`DEBUG ${client._context["location"]} app.registered`, data);
+});
+
+// Runs on app.activated event
 client.on("app.activated", (data) => {
 	console.log(`DEBUG ${client._context["location"]} app.activated`, data);
 });
 
+// Runs on app.deactivated event
+client.on("app.deactivated", (data) => {
+	console.log(`DEBUG ${client._context["location"]} app.deactiviated`, data);
+});
+
+// Runs on pane.activated event
 client.on("pane.activated", (data) => {
+	client.invoke("notify", `DEBUG ${client._context["location"]} app.activated`);
 	console.log(`DEBUG ${client._context["location"]} pane.activated`, data);
 });
 
+// Runs on pane.deactivated event
 client.on("pane.deactivated", (data) => {
 	console.log(`DEBUG ${client._context["location"]} pane.deactivated`, data);
-});
-
-client.on("app.registered", (data) => {
-	console.log(`DEBUG ${client._context["location"]} app.registered`, data);
-});
-
-client.on("app.deactivated", (data) => {
-	console.log(`DEBUG ${client._context["location"]} app.deactiviated`, data);
 });
 
 // Creates the modal instance
