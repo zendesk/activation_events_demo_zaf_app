@@ -2,7 +2,7 @@ const client = ZAFClient.init();
 
 // Runs on app.registered event
 client.on("app.registered", (data) => {
-	client.invoke("notify", `DEBUG ${client._context["location"]} app.activated`);
+	client.invoke("notify", `${client._context["location"]} app.activated`);
 	console.log(`DEBUG ${client._context["location"]} app.registered`, data);
 });
 
@@ -18,7 +18,7 @@ client.on("app.deactivated", (data) => {
 
 // Runs on pane.activated event
 client.on("pane.activated", (data) => {
-	client.invoke("notify", `DEBUG ${client._context["location"]} app.activated`);
+	client.invoke("notify", `${client._context["location"]} app.activated`);
 	console.log(`DEBUG ${client._context["location"]} pane.activated`, data);
 });
 

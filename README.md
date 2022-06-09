@@ -1,8 +1,8 @@
 # Test Activate Events
 
-This app is installed in every [location](https://developer.zendesk.com/api-reference/apps/apps-support-api/introduction/) and outputs to the browser's debug Console window when an event is detected.
+This app is installed in every [location](https://developer.zendesk.com/api-reference/apps/apps-support-api/introduction/) and outputs a notification to the Zendesk UI and to the browser's Console window when an event is detected.
 
-Filter on 'DEBUG' in Console window to reduce noise level and better see events as they happen.
+Filter with 'DEBUG' in the Console window to reduce noise level and better see events as they occur.
 
 All locations should have an app.activated event appear in the Console window.
 
