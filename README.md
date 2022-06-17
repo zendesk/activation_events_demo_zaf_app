@@ -1,4 +1,4 @@
-# Test Activate Events
+# Test Activation Events
 
 This app is installed in every [location](https://developer.zendesk.com/api-reference/apps/apps-support-api/introduction/) and outputs a notification to the Zendesk UI and to the browser's Console window when an event is detected.
 
@@ -23,7 +23,7 @@ Follow these steps to get a local copy up and running.
 1. Clone the repo
 
 ```
-git clone https://github.com/example.git
+git clone https://github.com/zendesk/activation_events_demo_zaf_app.git
 ```
 
 2. Run the app.
@@ -46,6 +46,6 @@ zcli apps:server
 
 ## Issues
 
-You can [create an issue on Github](https://github.com/zendesk/example/issues/new),
+You can [create an issue on Github](https://github.com/zendesk/activation_events_demo_zaf_app/issues/new),
 reach out in our [Developer Community](https://support.zendesk.com/hc/en-us/community/topics),
 or report the issue in the [Zendesk Developers Slack group](https://docs.google.com/forms/d/e/1FAIpQLScm_rDLWwzWnq6PpYWFOR_PwMaSBcaFft-1pYornQtBGAaiJA/viewform).
